@@ -101,6 +101,7 @@ with st.sidebar:
                 st.session_state["_loaded_subject"]   = rec.get("Subject", "")
                 st.session_state["_loaded_body"]      = rec.get("Body", "")
                 st.session_state["_loaded_note"]      = rec.get("Footnote", "")
+                st.session_state.html_body = None
                 # sheets
                 st.session_state["_loaded_sheet1"]    = rec.get("SHEET_NAME", "")
                 st.session_state["_loaded_sheet2"]    = rec.get("Open Tracking sheet", "")
@@ -682,4 +683,5 @@ if stop_btn:
         st.warning("🛑 Campaign stopped.")
     else:
         st.info("Campaign is not currently running.")
+
 
